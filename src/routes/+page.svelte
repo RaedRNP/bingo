@@ -17,6 +17,8 @@
 
         --title-size: 60px;
         --sub-title-size: 30px;
+        --title-size-mobile: 30px;
+        --sub-title-size-mobile: 15px;
     }
     main {
         width: 50%;
@@ -37,5 +39,20 @@
     p {
         margin: 0 0 48px 0;
         font-size: var(--sub-title-size);
+    }
+
+    @media (935px <= width <= 1110px) {}
+    @media (width <= 934px) {
+        main {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            font-size: var(--title-size-mobile);
+        }
+        p {
+            font-size: var(--sub-title-size-mobile);
+        }
     }
 </style>
