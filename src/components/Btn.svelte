@@ -28,7 +28,7 @@
         z-index: -1;
         width: 100%;
         height: 100%;
-        background: linear-gradient(45deg, #285238, #138a36, #04e824, #18ff6d, #04e824, #138a36, #285238);
+        background: linear-gradient(#04e824, #18ff6d, #04e824);
         background-size: 800%;
         border-radius: 10px;
         filter: blur(5px);
@@ -36,17 +36,5 @@
     }
     .btn:hover {
         background: #04e824;
-    }
-
-    @keyframes glowing {
-        0% {
-            background-position: 0 0;
-        }
-        50% {
-            background-position: 400% 0;
-        }
-        100% {
-            background-position: 0 0;
-        }
     }
 </style>

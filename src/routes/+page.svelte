@@ -23,6 +23,7 @@
         <div class="sub-title-section-2">
             <h2>Sub-titulo</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.</p>
+            <Btn title="play" />
         </div>
     </section>
     <footer>
@@ -33,13 +34,21 @@
             <li><a href="/">Creador de carta</a></li>
             <li><a href="/">Contactanos</a></li>
         </ul>
+        <div class="line"></div>
+        <div class="terms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam debitis fuga recusandae incidunt adipisci ea rerum molestias consequuntur suscipit, temporibus cum sequi ab enim soluta qui repellendus fugiat corrupti nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quo dolore libero quam in a officia ab voluptate impedit laboriosam enim, quos earum neque! Molestias perspiciatis reprehenderit possimus eaque quos!</div>
+        <ul>
+            <li><a href="/">Redes sociales</a></li>
+            <li><a href="/">Redes sociales</a></li>
+            <li><a href="/">Redes sociales</a></li>
+            <li><a href="/">Redes sociales</a></li>
+        </ul>
     </footer>
 </main>
 
 <style>
     :root {
         --margin-friend: 8px;
-        --margin-aquintances: 48px;
+        --margin-aquintances: 64px;
 
         --title-size: 60px;
         --sub-title-size: 30px;
@@ -116,10 +125,26 @@
         padding: 0 160px;
         transform: translate(-50%, -50%);
     }
+    .sub-title-section-2 p {
+        margin-bottom: var(--margin-aquintances);
+    }
     footer {
         width: 100%;
         height: 50vh;
         background: #ff5a5a;
+        padding: 0 200px;
+        align-content: center;
+    }
+    footer ul {
+        margin: var(--margin-friend);
+        display: flex;
+        justify-content: space-around;
+    }
+    footer .line {
+        width: 100%;
+        background-color: black;
+        height: 1px;
+        margin: 32px 0;
     }
 
     @media (935px <= width <= 1110px) {}

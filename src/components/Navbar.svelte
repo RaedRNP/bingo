@@ -1,8 +1,11 @@
-<script>
+<script lang="ts">
     import Btn from './Btn.svelte';
+    let y: number;
 </script>
 
-<header class="navbar">
+<svelte:window bind:scrollY={y} />
+
+<header class={y ? "navbar navbar-scrolled" : "navbar"}>
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
@@ -25,12 +28,15 @@
     </ul>
 </header>
 
+
 <style>
     :root {
         --btn-bg-color: red;
         --text-color: white;
         --act-hover-color: violet;
         --menu-mobile-background: green;
+        --navbar-bg-on-scroll: #151515d6;
+        --navbar-bg-top: transparent;
 
         --navbar-height: 80px;
 
@@ -47,7 +53,18 @@
         --hamburger-height: calc(var(--bar-height) * 3 + var(--bar-gap) * 2);
     }
     .navbar {
-        background: transparent;
+        background: var(--navbar-bg-top);
+        height: var(--navbar-height);
+        width: 100%;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        transition: background 200ms ease;
+    }
+    .navbar-scrolled {
+        background: var(--navbar-bg-on-scroll);
         height: var(--navbar-height);
         width: 100%;
         position: fixed;
