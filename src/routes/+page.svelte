@@ -3,11 +3,37 @@
 </script>
 
 <main>
-    <div class="main-front-page-desktop">
-        <h1>Bingo Karingo</h1>
-        <p>Lorem ipsum dolor sit amet</p>
-        <Btn title="play" />
+    <section class="banner">
+        <div class="title-section">
+            <h1>Titulo</h1>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <Btn title="play" />
+        </div>
+    </section>
+    <section class="home-section section-1">
+        <div class="sub-title-section">
+            <h2>Sub-titulo</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.</p>
+        </div>
+    </section>
+    <div class="mini-banner">
+        <h2>mini banner</h2>
     </div>
+    <section class="home-section">
+        <div class="sub-title-section-2">
+            <h2>Sub-titulo</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.</p>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/">Créditos gratis</a></li>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/">Creador de carta</a></li>
+            <li><a href="/">Contactanos</a></li>
+        </ul>
+    </footer>
 </main>
 
 <style>
@@ -20,25 +46,80 @@
         --title-size-mobile: 30px;
         --sub-title-size-mobile: 15px;
     }
-    main {
-        width: 50%;
+    .banner {
+        width: 100%;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
+        position: relative;
+        background-image: url(); /* Select image */
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(black 90%, transparent);
     }
-    .main-front-page-desktop {
-        padding: 80px;
+    .title-section {
+        width: 50%;
+        height: 100%;
+        align-content: center;
+        position: absolute;
+        left: 25%;
+        transform: translateX(-25%);
+    }
+    .title-section h1, .title-section h2 {
+        color: var(--main-text-color);
     }
     h1 {
         margin: 8px 0;
         text-transform: uppercase;
         font-size: var(--title-size);
     }
-    p {
+    h2 {
         margin: 0 0 48px 0;
         font-size: var(--sub-title-size);
+    }
+    .home-section {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .section-1 {
+        background: #b09620;
+    }
+    .sub-title-section {
+        text-align: end;
+        width: 50%;
+        height: 100%;
+        align-content: center;
+        position: absolute;
+        right: 25%;
+        padding-left: 160px;
+        transform: translateX(25%);
+    }
+    .mini-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 25vh;
+        width: 100%;
+        background: #ff5a5a;
+    }
+    .mini-banner h2 {
+        margin: 0;
+    }
+    .sub-title-section-2 {
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        align-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        padding: 0 160px;
+        transform: translate(-50%, -50%);
+    }
+    footer {
+        width: 100%;
+        height: 50vh;
+        background: #ff5a5a;
     }
 
     @media (935px <= width <= 1110px) {}
@@ -51,8 +132,23 @@
         h1 {
             font-size: var(--title-size-mobile);
         }
-        p {
+        h2 {
             font-size: var(--sub-title-size-mobile);
+        }
+        .title-section {
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .sub-title-section {
+            text-align: center;
+            width: 100%;
+            left: 50%;
+            padding: 30px;
+            transform: translateX(-50%);
+        }
+        .sub-title-section-2 {
+            padding: 0 30px;
         }
     }
 </style>
