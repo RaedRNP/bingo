@@ -7,34 +7,25 @@
 </a>
 
 <style>
+    :root {
+        --button-bg: #0766AD;
+        --hover-bg: #1097ff;
+        --text-color-btn: #F5F5F5;
+    }
+
     .btn {
-        background: #138a36;
+        background: var(--button-bg);
         cursor: pointer;
         text-decoration: none;
         padding: 1rem 2rem;
         margin: 8px 0;
-        color: #fff;
+        color: var(--text-color-btn);
         font-weight: 600;
         text-transform: uppercase;
         position: relative;
         border-radius: 12px;
-        transition: all 0.2s ease;
-    }
-    .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#04e824, #18ff6d, #04e824);
-        background-size: 800%;
-        border-radius: 10px;
-        filter: blur(5px);
-        animation: glowing 60s linear infinite;
     }
     .btn:hover {
-        background: #04e824;
+        background: var(--hover-bg);
     }
 </style>

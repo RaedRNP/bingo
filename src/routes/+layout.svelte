@@ -1,5 +1,6 @@
 <script>
     import Navbar from '../components/Navbar.svelte';
+    import Footer from '../components/Footer.svelte';
     import '@fontsource/geist-sans/100.css';
     import '@fontsource/geist-sans/200.css';
     import '@fontsource/geist-sans/300.css';
@@ -15,13 +16,15 @@
 
 <Navbar />
 {@render children()}
+<Footer />
 
 <style>
     :global(:root) {
-        --main-color: violet;
-        --secondary-color: red;
-        --background-main-color: #731f1f;
-        --main-text-color: #f5f5f5;
+        --main-color: #0766AD;
+        --secondary-color: #C5E898;
+        --background-main-color: #f5f5f5;
+        --main-text-color: #0766AD;
+        --alert-color: #F7EC09;
     }
 
     :global(*) {

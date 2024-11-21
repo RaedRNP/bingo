@@ -32,10 +32,10 @@
 <style>
     :root {
         --btn-bg-color: red;
-        --text-color: white;
+        --text-color: #0766AD;
         --act-hover-color: violet;
-        --menu-mobile-background: green;
-        --navbar-bg-on-scroll: #151515d6;
+        --menu-mobile-background: #F7EC09;
+        --navbar-bg-on-scroll: #F7EC09;
         --navbar-bg-top: transparent;
 
         --navbar-height: 80px;
@@ -72,6 +72,7 @@
         align-items: center;
         justify-content: space-between;
         z-index: 1000;
+        box-shadow: 0 0 1px 0 #00000080;
     }
     .navbar .logo {
         color: var(--main-text-color);
