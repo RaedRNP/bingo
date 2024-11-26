@@ -14,7 +14,7 @@
         <li><a href="/">Blog</a></li>
         <li><a href="/">Comunidad</a></li>
         <li><a href="/">Soporte</a></li>
-        <li><a href="/">Tienda</a></li>
+        <!-- <li><a href="/">Tienda</a></li> -->
         <div class="hidden-btn">
             <Btn title="PLAY" />
         </div>
@@ -24,7 +24,7 @@
         <li>
             <a href="/">Crear carta</a>
         </li>
-        <Btn title='PLAY' />
+        <Btn title='PLAY' link='/login' />
     </ul>
 </header>
 

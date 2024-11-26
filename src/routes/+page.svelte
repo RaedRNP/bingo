@@ -1,20 +1,27 @@
 <script>
     import Btn from '../components/Btn.svelte';
+
+    const title = "Sport's Book";
+    const underTitle = "online, C.A."
+    const subTitle = "Lorem ipsum dolor sit amet";
+
+    const sectionOneSubTitle = "Sub-titulo";
+    const sectionOneParagraph = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.";
 </script>
 
 <main>
     <section class="banner">
         <div class="title-section">
-            <h1>Sport's Book</h1>
-            <span>online, C.A.</span>
-            <h2>Lorem ipsum dolor sit amet</h2>
+            <h1>{title}</h1>
+            <span>{underTitle}</span>
+            <h2>{subTitle}</h2>
             <Btn title="play" />
         </div>
     </section>
     <section class="home-section section-1">
         <div class="sub-title-section">
-            <h2>Sub-titulo</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.</p>
+            <h2>{sectionOneSubTitle}</h2>
+            <p>{sectionOneParagraph}</p>
         </div>
     </section>
     <div class="mini-banner">
