@@ -1,7 +1,7 @@
 <script>
     import Btn from '../components/Btn.svelte';
+    import { SiteName } from '$lib/generalInfoVars';
 
-    const title = "Sport's Book";
     const underTitle = "online, C.A."
     const subTitle = "Lorem ipsum dolor sit amet";
 
@@ -12,10 +12,10 @@
 <main>
     <section class="banner">
         <div class="title-section">
-            <h1>{title}</h1>
+            <h1>{SiteName}</h1>
             <span>{underTitle}</span>
             <h2>{subTitle}</h2>
-            <Btn title="play" />
+            <Btn title="play" link='/inicio-sesion' />
         </div>
     </section>
     <section class="home-section section-1">
@@ -31,21 +31,12 @@
         <div class="sub-title-section-2">
             <h2>Sub-titulo</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.</p>
-            <Btn title="play" />
+            <Btn title="play" link='/inicio-sesion' />
         </div>
     </section>
 </main>
 
 <style>
-    :root {
-        --margin-friend: 8px;
-        --margin-aquintances: 64px;
-
-        --title-size: 60px;
-        --sub-title-size: 30px;
-        --title-size-mobile: 30px;
-        --sub-title-size-mobile: 15px;
-    }
     .banner {
         width: 100%;
         height: 100vh;
@@ -65,6 +56,7 @@
     }
     .title-section h1, .title-section h2 {
         color: var(--main-text-color);
+        text-shadow: var(--text-shadow);
     }
     h1 {
         text-transform: uppercase;

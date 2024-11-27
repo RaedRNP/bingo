@@ -13,10 +13,10 @@
         <li><a href="/">Créditos</a></li>
         <li><a href="/">Blog</a></li>
         <li><a href="/">Comunidad</a></li>
-        <li><a href="/">Soporte</a></li>
+        <li><a href="/soporte">Soporte</a></li>
         <!-- <li><a href="/">Tienda</a></li> -->
         <div class="hidden-btn">
-            <Btn title="PLAY" />
+            <Btn title="Jugar" />
         </div>
     </ul>
     <a class="logo" href="/">LOGO</a> <!-- Change for img tag when real logo -->
@@ -24,7 +24,7 @@
         <li>
             <a href="/">Crear carta</a>
         </li>
-        <Btn title='PLAY' link='/login' />
+        <Btn title='PLAY' link='/inicio-sesion' />
     </ul>
 </header>
 

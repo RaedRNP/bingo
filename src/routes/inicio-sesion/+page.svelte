@@ -177,11 +177,14 @@
     .social-icons a {
         display: inline-flex;
         padding: 10px;
-        border: 2px solid #333;
+        border: 2px solid var(--main-color);
         border-radius: 8px;
         font-size: 24px;
-        color: #333;
+        color: var(--main-color);
         margin: 0 8px;
+    }
+    .social-icons a i {
+        color: var(--main-color);
     }
     .toggle-box {
         position: absolute;
@@ -243,7 +246,7 @@
         border: 2px solid var(--background-main-color);
         box-shadow: none;
     }
-    .toggle-panel .submit-btn:hover {
+    .submit-btn:hover {
         background-color: #1097ff;
     }
 

@@ -15,14 +15,13 @@
 
     .btn {
         background: var(--button-bg);
+        display: inline-block;
         cursor: pointer;
         text-decoration: none;
         padding: 1rem 2rem;
-        margin: 8px 0;
         color: var(--text-color-btn);
         font-weight: 600;
         text-transform: uppercase;
-        position: relative;
         border-radius: 12px;
     }
     .btn:hover {

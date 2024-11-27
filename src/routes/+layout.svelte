@@ -25,6 +25,15 @@
         --background-main-color: #f5f5f5;
         --main-text-color: #0766AD;
         --alert-color: #F7EC09;
+        
+        --text-shadow: #33333380 0 3px 6px;
+        --margin-friend: 8px;
+        --margin-aquintances: 64px;
+
+        --title-size: 60px;
+        --sub-title-size: 30px;
+        --title-size-mobile: 30px;
+        --sub-title-size-mobile: 15px;
     }
 
     :global(*) {
