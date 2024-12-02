@@ -1,9 +1,9 @@
 <script>
-    import Btn from "../../components/Btn.svelte";
     import { SiteName } from "$lib/generalInfoVars";
+    import Card from "../../components/Card.svelte";
 </script>
 
-<main class="container">
+<main>
     <div class="half-banner">
         <h2>Soporte de {SiteName}</h2>
         <h1>¿En qué podemos ayudar?</h1>
@@ -12,32 +12,19 @@
     <div class="guide-lines">
         <h2 class="problems-subtitle">Posibles problemas y sus soluciones</h2>
         <div class="reactive-cards">
-            <div class="card">
-                <img src="favicon.png" alt="favicon">
-                <h2>Carta</h2>
-                <p>descripcion</p>
-            </div>
-            <div class="card">
-                <img src="favicon.png" alt="favicon">
-                <h2>Carta</h2>
-                <p>descripcion</p>
-            </div>
-            <div class="card">
-                <img src="favicon.png" alt="favicon">
-                <h2>Carta</h2>
-                <p>descripcion</p>
-            </div>
-            <div class="card">
-                <img src="favicon.png" alt="favicon">
-                <h2>Carta</h2>
-                <p>descripcion</p>
-            </div>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
         </div>
-    </div>
-    <div class="play-zone">
-        <Btn title='Juega' />
+        <button class="see-more">Ver más...</button>
     </div>
 </main>
+
+<!-- 
+    --title-size: 60px;
+    --sub-title-size: 30px; 
+-->
 
 <style>
     .half-banner {
@@ -49,15 +36,25 @@
         justify-content: end;
         align-items: center;
         text-transform: uppercase;
+        padding: 20px;
     }
     .half-banner h2, .half-banner h1 {
         color: var(--main-color);
         margin: var(--margin-friend) 0 0 0;
         text-shadow: var(--text-shadow);
     }
+    .half-banner h2 {
+        font-size: var(--sub-title-size);
+        font-weight: var(--font-weigth);
+    }
+    .half-banner h1 {
+        font-size: var(--title-size);
+        font-weight: var(--font-weigth);
+    }
     .half-banner button {
         width: fit-content;
-        height: 48px;
+        min-height: 48px;
+        max-height: fit-content;
         padding: 10px;
         margin: var(--margin-aquintances) 0 calc(var(--margin-friend) + 16px) 0;
         background: transparent;
@@ -81,42 +78,38 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        text-align: center;
     }
     .guide-lines h2 {
         color: var(--main-color);
+        font-size: var(--sub-title-size);
+        font-weight: var(--font-weigth);
     }
     .problems-subtitle {
         margin: var(--margin-aquintances) 0;
     }
     .guide-lines .reactive-cards {
-        width: 100%;
+        width: 80%;
         height: fit-content;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        margin: 0 0 var(--margin-aquintances) 0;
     }
-    .guide-lines .reactive-cards .card {
-        width: 400px;
-        height: 150px;
-        padding: 20px;
-        position: relative;
-        border-radius: 20px;
-        box-shadow: 2px 2px 10px #33333360;
+    .see-more {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        width: fit-content;
+        cursor: pointer;
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: var(--sub-title-size-mobile);
     }
-    .guide-lines .reactive-cards .card img {
-        height: 50px;
-        width: 50px;
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .guide-lines .reactive-cards .card h2 {
-        position: absolute;
-        left: 30%;
-        top: 20%;
-    }
-    .guide-lines .reactive-cards .card p {
-        position: absolute;
-        left: 30%;
-        top: 50%;
-        transform: translateY(-50%);
+    @media screen and (max-width: 650px) {
+        .guide-lines .reactive-cards {
+            grid-template-columns: auto;
+        }
     }
 </style>

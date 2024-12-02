@@ -61,11 +61,12 @@
     h1 {
         text-transform: uppercase;
         font-size: var(--title-size);
+        font-weight: var(--font-weigth);
     }
     span {
         color: var(--main-text-color);
         font-weight: var(--sub-title-size);
-        font-weight: bold;
+        font-weight: var(--font-weigth);
     }
     h2 {
         margin: var(--margin-friend) 0 48px 0;
@@ -115,8 +116,6 @@
     .sub-title-section-2 p {
         margin-bottom: var(--margin-aquintances);
     }
-
-    @media (935px <= width <= 1110px) {}
     @media (width <= 934px) {
         main {
             width: 100%;
