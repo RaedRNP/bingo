@@ -1,6 +1,10 @@
 <script>
-    import Btn from '../components/Btn.svelte';
     import { SiteName } from '$lib/generalInfoVars';
+
+    import { Button } from 'flowbite-svelte';
+    import { ArrowRightOutline } from 'flowbite-svelte-icons';
+
+    import { goto } from '$app/navigation';
 
     const underTitle = "online, C.A."
     const subTitle = "Lorem ipsum dolor sit amet";
@@ -15,7 +19,9 @@
             <h1>{SiteName}</h1>
             <span>{underTitle}</span>
             <h2>{subTitle}</h2>
-            <Btn title="play" link='/inicio-sesion' />
+            <Button class='uppercase bg-[#0766AD] text-white hover:bg-[#1097ff]' onclick={()=>goto('/inicio-sesion')}>
+                Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
+            </Button>
         </div>
     </section>
     <section class="home-section section-1">
@@ -25,13 +31,15 @@
         </div>
     </section>
     <div class="mini-banner">
-        <h2>mini banner</h2>
+        <h2>GRANDES PREMIOS TE ESPERAN</h2>
     </div>
     <section class="home-section">
         <div class="sub-title-section-2">
             <h2>Sub-titulo</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.</p>
-            <Btn title="play" link='/inicio-sesion' />
+            <Button class='uppercase bg-[#0766AD] text-white hover:bg-[#1097ff]' onclick={()=>goto('/inicio-sesion')}>
+                Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
+            </Button>
         </div>
     </section>
 </main>
@@ -41,6 +49,7 @@
         width: 100%;
         height: 100vh;
         position: relative;
+        background-color: aliceblue;
         background-image: url(); /* Select image */
         background-repeat: no-repeat;
         background-size: cover;
@@ -78,9 +87,9 @@
         position: relative;
     }
 
-    .section-1 {
-        background: #b09620;
-    }
+    /* .section-1 {
+        background: #e4e4e4;
+    } */
     .sub-title-section {
         text-align: end;
         width: 50%;
@@ -101,6 +110,8 @@
     }
     .mini-banner h2 {
         margin: 0;
+        font-weight: 800;
+        letter-spacing: 5px;
     }
     .sub-title-section-2 {
         text-align: center;

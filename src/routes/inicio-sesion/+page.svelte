@@ -96,7 +96,7 @@
         right: 0;
         width: 50%;
         height: 100%;
-        background-color: var(--background-main-color);
+        background-color: #ffffff;
         display: flex;
         align-items: center;
         text-align: center;

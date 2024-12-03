@@ -44,7 +44,6 @@
         box-sizing: border-box;
         list-style: none;
         text-decoration: none;
-        color: black;
     }
     :global(body) {
         font-family: 'Geist Sans', sans-serif;
