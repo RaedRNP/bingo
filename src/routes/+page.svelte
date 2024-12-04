@@ -1,24 +1,22 @@
 <script>
     import { SiteName } from '$lib/generalInfoVars';
 
-    import { Button } from 'flowbite-svelte';
+    import { Button, Heading, P } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
     import { goto } from '$app/navigation';
 
-    const underTitle = "online, C.A."
-    const subTitle = "Lorem ipsum dolor sit amet";
+    const subTitle = "¡La suerte está de tu lado... y si no, te damos una mano!";
 
-    const sectionOneSubTitle = "Sub-titulo";
-    const sectionOneParagraph = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.";
+    const sectionOneSubTitle = "¿Listo para un poco de diversión y suerte?";
+    const sectionOneParagraph = "¡En 'Mi bingo en línea' encontrarás todo eso y más! ¡Marca tus números, grita ¡Bingo! y si no es tu día, no te preocupes, ¡te devolvemos parte de tu dinero! ¡Porque en nuestro bingo, ¡siempre ganas!";
 </script>
 
 <main>
     <section class="banner">
         <div class="title-section">
             <h1>{SiteName}</h1>
-            <span>{underTitle}</span>
-            <h2>{subTitle}</h2>
+            <Heading tag='h2' class='my-8 text-[#0766AD]' >{subTitle}</Heading>
             <Button class='uppercase bg-[#0766AD] text-white hover:bg-[#1097ff]' onclick={()=>goto('/inicio-sesion')}>
                 Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
             </Button>
@@ -26,8 +24,8 @@
     </section>
     <section class="home-section section-1">
         <div class="sub-title-section">
-            <h2>{sectionOneSubTitle}</h2>
-            <p>{sectionOneParagraph}</p>
+            <Heading tag='h2' class='mb-8 text-[#0766AD]' >{sectionOneSubTitle}</Heading>
+            <P class='md:text-end text-center'>{sectionOneParagraph}</P>
         </div>
     </section>
     <div class="mini-banner">
@@ -35,8 +33,8 @@
     </div>
     <section class="home-section">
         <div class="sub-title-section-2">
-            <h2>Sub-titulo</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod animi corrupti! Itaque doloremque animi quo magni excepturi quos distinctio possimus vero, id placeat commodi autem nulla consectetur consequatur molestiae.</p>
+            <Heading tag='h3' class='mb-8'>Imagina sentir la adrenalina de marcar todos los números y gritar ¡Bingo!</Heading>
+            <p>En 'Mi bingo en línea' puedes hacer realidad ese sueño. Con nuestro sistema de reembolso, jugar es completamente seguro y divertido. ¡Descubre un mundo de posibilidades y gana grandes premios! ¡Anímate a probar tu suerte!</p>
             <Button class='uppercase bg-[#0766AD] text-white hover:bg-[#1097ff]' onclick={()=>goto('/inicio-sesion')}>
                 Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
             </Button>
@@ -63,18 +61,13 @@
         left: 25%;
         transform: translateX(-25%);
     }
-    .title-section h1, .title-section h2 {
+    .title-section h1 {
         color: var(--main-text-color);
         text-shadow: var(--text-shadow);
     }
     h1 {
         text-transform: uppercase;
         font-size: var(--title-size);
-        font-weight: var(--font-weigth);
-    }
-    span {
-        color: var(--main-text-color);
-        font-weight: var(--sub-title-size);
         font-weight: var(--font-weigth);
     }
     h2 {

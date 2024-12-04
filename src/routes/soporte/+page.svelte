@@ -1,13 +1,15 @@
 <script>
     import { SiteName } from "$lib/generalInfoVars";
     import Card from "../../components/Card.svelte";
+    import { Button } from "flowbite-svelte";
 </script>
 
 <main>
     <div class="half-banner">
         <h2>Soporte de {SiteName}</h2>
         <h1>¿En qué podemos ayudar?</h1>
-        <button>Contacta con nuestro equipo de soporte</button>
+        <Button outline class='text-[#0766AD] border-[#0766AD] hover:bg-[#0766AD] mt-8'>Contacta con nuestro equipo de soporte</Button>
+        <!-- <button>Contacta con nuestro equipo de soporte</button> -->
     </div>
     <div class="guide-lines">
         <h2 class="problems-subtitle">Posibles problemas y sus soluciones</h2>
@@ -50,26 +52,6 @@
     .half-banner h1 {
         font-size: var(--title-size);
         font-weight: var(--font-weigth);
-    }
-    .half-banner button {
-        width: fit-content;
-        min-height: 48px;
-        max-height: fit-content;
-        padding: 10px;
-        margin: var(--margin-aquintances) 0 calc(var(--margin-friend) + 16px) 0;
-        background: transparent;
-        border-radius: 8px;
-        color: var(--main-color);
-        box-shadow: 0 0 10px rgb(0, 0, 0, .1);
-        border: 2px solid var(--main-color);
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-    .half-banner button:hover {
-        background-color: var(--main-color);
-        color: var(--background-main-color);
     }
     .guide-lines {
         height: fit-content;

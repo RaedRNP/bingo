@@ -4,7 +4,7 @@
 
 <div>
     <h1>
-        Te prometemos que estamos trabajando en ello
+        Te prometemos que estamos trabajando en ello.
     </h1>
     <Spinner />
     <Button href="/">Inicio</Button>
@@ -19,6 +19,7 @@
         justify-content: center;
         align-items: center;
         gap: 25px;
+        text-align: center;
     }
     div h1 {
         font-weight: 600;
