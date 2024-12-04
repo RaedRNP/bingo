@@ -1,56 +1,21 @@
 <script>
-    import { Sidebar, SidebarGroup, SidebarItem, SidebarWrapper } from 'flowbite-svelte';
-    import { ChartPieSolid, MailBoxSolid, ShoppingBagSolid, ArrowRightToBracketOutline, AdjustmentsHorizontalOutline, LifeSaverSolid } from 'flowbite-svelte-icons';
-    let spanClass = 'flex-1 ms-3 whitespace-nowrap';
+    import { Heading, Button, Popover, Fileupload, Helper } from 'flowbite-svelte';
+    import { CartSolid } from 'flowbite-svelte-icons';
+    const Datos = {
+        numTelf: '+58 424-1234567',
+        id: 'V-12.345.678',
+        banco: 'Banco'
+    }
+
 </script>
 
-<main>
-    <Sidebar class='md:pt-12 w-14 md:min-w-fit'>
-      <SidebarWrapper>
-        <SidebarGroup>
-          <SidebarItem label="Dashboard">
-            <svelte:fragment slot="icon">
-              <ChartPieSolid class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-            </svelte:fragment>
-          </SidebarItem>
-          
-          <SidebarItem label="Inbox" {spanClass}>
-            <svelte:fragment slot="icon">
-              <MailBoxSolid class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-            </svelte:fragment>
-            <svelte:fragment slot="subtext">
-              <span class="inline-flex justify-center items-center p-3 ms-3 w-3 h-3 text-sm font-medium text-primary-600 bg-primary-200 rounded-full dark:bg-primary-900 dark:text-primary-200"> 3 </span>
-            </svelte:fragment>
-          </SidebarItem>
-          <SidebarItem label="Products">
-            <svelte:fragment slot="icon">
-              <ShoppingBagSolid class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-            </svelte:fragment>
-          </SidebarItem>
-          <span class="h-32 block"></span>
-        </SidebarGroup>
-        <SidebarGroup border>
-          <SidebarItem label="Ajustes">
-            <svelte:fragment slot="icon">
-              <AdjustmentsHorizontalOutline class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-            </svelte:fragment>
-          </SidebarItem>
-          <SidebarItem label="Ayuda">
-            <svelte:fragment slot="icon">
-              <LifeSaverSolid class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-            </svelte:fragment>
-          </SidebarItem>
-          <SidebarItem label="Cerrar Sesión">
-            <svelte:fragment slot="icon">
-              <ArrowRightToBracketOutline class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-            </svelte:fragment>
-          </SidebarItem>
-        </SidebarGroup>
-      </SidebarWrapper>
-    </Sidebar>
-    <div></div>
-</main>
-
-<style>
-    
-</style>
+<div class="text-center flex flex-col gap-8">
+    <Heading class='text-[#0766AD]'>Saldo</Heading>
+    <Heading>122 B$</Heading>
+    <Button id='arrow'>
+        <CartSolid class="w-5 h-5 me-2" /> Recarga
+    </Button>
+    <Popover arrow={true} class="w-64 text-sm font-light" title="Pago Móvil" triggeredBy="#arrow">{Datos.numTelf}<br>{Datos.id}<br>{Datos.banco}</Popover>
+    <Fileupload id="with_helper" class="mb-2" />
+    <Helper>SVG, PNG, JPG or GIF (MAX. 800x400px).</Helper>
+</div>
