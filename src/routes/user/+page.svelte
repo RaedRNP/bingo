@@ -1,24 +1,35 @@
-<script>
+<script lang="ts">
+    import SuperDebug, { superForm } from 'sveltekit-superforms';
     let active = $state(false);  
+    let message: string = $state('');
+
+    let { data } = $props();
+
+    const { form } = superForm(data.form)
 </script>
+
+<SuperDebug data={$form} />
 
 <div class="container-page">
  <div class={active ? "container-box active" : "container-box" } >
     <div class="form-box login">
-        <form action="">
+        <form method="POST">
             <h1>Inicio de sesión</h1>
             <div class="input-box">
-                <input type="text" placeholder="Nombre de usuario" required>
+                <input type="text" placeholder="Email" bind:value={$form.email} required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Contraseña" bind:value={$form.password} required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="forgot-link">
                 <a href="/">¿Olvidó su contraseña?</a>
             </div>
             <button type="submit" class="submit-btn">Iniciar sesión</button>
+            {#if message}
+            <p class="text-red-600">{message}</p>
+            {/if}
             <p>O inicia sesión con redes sociales</p>
             <div class="social-icons">
                 <!-- svelte-ignore a11y_consider_explicit_label -->
@@ -30,21 +41,24 @@
     </div>
 
     <div class="form-box register">
-        <form action="">
+        <form method="POST">
             <h1>Regístrate</h1>
             <div class="input-box">
-                <input type="text" placeholder="Nombre de usuario" required>
+                <input type="text" placeholder="Nombre de usuario" bind:value={$form.username} required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="email" placeholder="Correo electrónico" required>
+                <input type="email" placeholder="Correo electrónico" bind:value={$form.email} required>
                 <i class='bx bxs-envelope' ></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Contraseña" bind:value={$form.password} required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <button type="submit" class="submit-btn">Regístrate</button>
+            {#if message}
+            <p class="text-red-600">{message}</p>
+            {/if}
             <p>O regístrate con redes sociales</p>
             <div class="social-icons">
                 <!-- svelte-ignore a11y_consider_explicit_label -->
