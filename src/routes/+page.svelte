@@ -16,10 +16,13 @@
     <section class="banner">
         <div class="title-section">
             <h1>{SiteName}</h1>
-            <Heading tag='h2' class='my-8 text-[#0766AD]' >{subTitle}</Heading>
-            <Button class='uppercase bg-[#0766AD] text-white hover:bg-[#1097ff]' onclick={()=>goto('/inicio-sesion')}>
+            <Heading tag='h2' class='my-8 text-[#f5f5f5]' >{subTitle}</Heading>
+            <Button class='uppercase text-white bg-[#4ec93f] hover:bg-[#68ff54]' onclick={()=>goto('/inicio-sesion')}>
                 Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
             </Button>
+        </div>
+        <div class="w-full sm:w-1/2 sm:absolute right-0 p-5 -z-10">
+            <img src="/dibujo-01.png" alt="bingo ruleta">
         </div>
     </section>
     <section class="home-section section-1">
@@ -29,13 +32,13 @@
         </div>
     </section>
     <div class="mini-banner">
-        <h2>GRANDES PREMIOS TE ESPERAN</h2>
+        <h2>¡CANTA BINGO Y GANA!</h2>
     </div>
     <section class="home-section">
         <div class="sub-title-section-2">
             <Heading tag='h3' class='mb-8'>Imagina sentir la adrenalina de marcar todos los números y gritar ¡Bingo!</Heading>
             <p>En 'Mi bingo en línea' puedes hacer realidad ese sueño. Con nuestro sistema de reembolso, jugar es completamente seguro y divertido. ¡Descubre un mundo de posibilidades y gana grandes premios! ¡Anímate a probar tu suerte!</p>
-            <Button class='uppercase bg-[#0766AD] text-white hover:bg-[#1097ff]' onclick={()=>goto('/inicio-sesion')}>
+            <Button class='uppercase text-white bg-[#4ec93f] hover:bg-[#68ff54]' onclick={()=>goto('/inicio-sesion')}>
                 Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
             </Button>
         </div>
@@ -47,7 +50,7 @@
         width: 100%;
         height: 100vh;
         position: relative;
-        background-color: aliceblue;
+        background-color: #00b4f9;
         background-image: url(); /* Select image */
         background-repeat: no-repeat;
         background-size: cover;
@@ -58,8 +61,8 @@
         height: 100%;
         align-content: center;
         position: absolute;
-        left: 25%;
-        transform: translateX(-25%);
+        left: 0;
+        padding: 6rem;
     }
     .title-section h1 {
         color: var(--main-text-color);
@@ -99,7 +102,7 @@
         justify-content: space-around;
         height: 25vh;
         width: 100%;
-        background: #ff5a5a;
+        background: #ffd400;
     }
     .mini-banner h2 {
         margin: 0;

@@ -21,10 +21,10 @@
 
 <style>
     :global(:root) {
-        --main-color: #0766AD;
+        --main-color: #f5f5f5;
         --secondary-color: #C5E898;
-        --background-main-color: #f5f5f5;
-        --main-text-color: #0766AD;
+        --background-main-color: #0766AD;
+        --main-text-color: #f5f5f5;
         --alert-color: #F7EC09;
         
         --text-shadow: #33333360 0 3px 6px;
