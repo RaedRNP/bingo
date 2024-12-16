@@ -1,1 +1,1 @@
-export let SiteName: string = "Mi Bingo en Línea";
+export let SiteName: string = "Bingo Ruleta";
