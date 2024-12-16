@@ -21,14 +21,25 @@
                 Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
             </Button>
         </div>
-        <div class="w-full sm:w-1/2 sm:absolute right-0 p-5 -z-10">
+        <div class="w-full sm:w-1/2 sm:absolute right-0 p-5 -z-10 sm:block hidden">
             <img src="/dibujo-01.png" alt="bingo ruleta">
         </div>
     </section>
-    <section class="home-section section-1">
-        <div class="sub-title-section">
-            <Heading tag='h2' class='mb-8 text-[#0766AD]' >{sectionOneSubTitle}</Heading>
-            <P class='md:text-end text-center'>{sectionOneParagraph}</P>
+    <section class="text-center h-auto py-24">
+        <Heading tag="h2" class="pb-12">TRES SENCILLOS PASOS PARA JUGAR</Heading>
+        <div class="flex justify-center items-center gap-14 sm:flex-row flex-col">
+            <div class="circle">
+                <Heading tag="h3">PASO 1</Heading>
+                <p>Registrate</p>
+            </div>
+            <div class="circle">
+                <Heading tag="h3">PASO 2</Heading>
+                <p>Recarga</p>
+            </div>
+            <div class="circle">
+                <Heading tag="h3">PASO 3</Heading>
+                <p>¡Juega!</p>
+            </div>
         </div>
     </section>
     <div class="mini-banner">
@@ -36,8 +47,8 @@
     </div>
     <section class="home-section">
         <div class="sub-title-section-2">
-            <Heading tag='h3' class='mb-8'>Imagina sentir la adrenalina de marcar todos los números y gritar ¡Bingo!</Heading>
-            <p>En 'Mi bingo en línea' puedes hacer realidad ese sueño. Con nuestro sistema de reembolso, jugar es completamente seguro y divertido. ¡Descubre un mundo de posibilidades y gana grandes premios! ¡Anímate a probar tu suerte!</p>
+            <Heading tag='h2' class='mb-8 text-[#0766AD]' >{sectionOneSubTitle}</Heading>
+            <P class='text-center mb-8'>{sectionOneParagraph}</P>
             <Button class='uppercase text-white bg-[#4ec93f] hover:bg-[#68ff54]' onclick={()=>goto('/inicio-sesion')}>
                 Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
             </Button>
@@ -51,10 +62,9 @@
         height: 100vh;
         position: relative;
         background-color: #00b4f9;
-        background-image: url(); /* Select image */
         background-repeat: no-repeat;
         background-size: cover;
-        mask-image: linear-gradient(black 90%, transparent);
+        mask-image: linear-gradient(black 92%, transparent);
     }
     .title-section {
         width: 50%;
@@ -83,10 +93,28 @@
         position: relative;
     }
 
+    .circle {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 1000px;
+        align-content: center;
+        text-align: center;
+    }
+
+    .circle:nth-child(1) {
+        border: 20px solid #ffd400;
+    }
+    .circle:nth-child(2) {
+        border: 20px solid #ff331d;
+    }
+    .circle:nth-child(3) {
+        border: 20px solid #4ec93f;
+    }
+
     /* .section-1 {
         background: #e4e4e4;
     } */
-    .sub-title-section {
+    /* .sub-title-section {
         text-align: end;
         width: 50%;
         height: 100%;
@@ -95,7 +123,7 @@
         right: 25%;
         padding-left: 160px;
         transform: translateX(25%);
-    }
+    } */
     .mini-banner {
         display: flex;
         align-items: center;
@@ -119,10 +147,10 @@
         top: 50%;
         padding: 0 160px;
         transform: translate(-50%, -50%);
-    }
+    }/* 
     .sub-title-section-2 p {
         margin-bottom: var(--margin-aquintances);
-    }
+    } */
     @media (width <= 934px) {
         main {
             width: 100%;
@@ -140,13 +168,16 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        .sub-title-section {
+        .title-section h1 {
+            font-size: 3em;
+        }
+        /* .sub-title-section {
             text-align: center;
             width: 100%;
             left: 50%;
             padding: 30px;
             transform: translateX(-50%);
-        }
+        } */
         .sub-title-section-2 {
             padding: 0 30px;
         }

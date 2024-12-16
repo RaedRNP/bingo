@@ -16,7 +16,7 @@
   
 <Navbar class={y ? "md:fixed bg-white z-10 transition-colors" : "md:fixed z-10 transition-colors bg-transparent"}>
   <NavBrand href="/">
-    <img src="/BINGO_RULETA_logo.png" class="me-3 h-12 sm:h-20" alt="Flowbite Logo" />
+    <img src="/bingo-ruleta-logo.png" class="me-3 h-12 sm:h-20" alt="Flowbite Logo" />
     <span class={y ? "self-center whitespace-nowrap text-2xl font-semibold text-black" : "self-center whitespace-nowrap text-2xl font-semibold text-white"}>{SiteName}</span>
   </NavBrand>
   <div class="flex items-center md:order-2">
