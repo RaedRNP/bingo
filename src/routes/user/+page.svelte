@@ -8,8 +8,6 @@
     const { form } = superForm(data.form)
 </script>
 
-<SuperDebug data={$form} />
-
 <div class="container-page">
  <div class={active ? "container-box active" : "container-box" } >
     <div class="form-box login">
@@ -94,6 +92,7 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
+        background: #00b4f9;
     }
 
     .container-box {
@@ -212,7 +211,7 @@
         width: 300%;
         height: 100%;
         background: var(--main-color);
-        border-radius: 80px;
+        /* border-radius: 80px; */
         z-index: 2;
         transition: all 1s ease-in-out;
     }

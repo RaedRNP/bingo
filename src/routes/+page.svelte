@@ -15,7 +15,7 @@
 <main>
     <section class="banner">
         <div class="title-section">
-            <h1>{SiteName}</h1>
+            <h1 class="text-7xl">{SiteName}</h1>
             <Heading tag='h2' class='my-8 text-[#f5f5f5]' >{subTitle}</Heading>
             <Button class='uppercase text-white bg-[#4ec93f] hover:bg-[#68ff54]' onclick={()=>goto('/inicio-sesion')}>
                 Jugar <ArrowRightOutline class="w-6 h-6 ms-2" />
@@ -80,7 +80,6 @@
     }
     h1 {
         text-transform: uppercase;
-        font-size: var(--title-size);
         font-weight: var(--font-weigth);
     }
     h2 {
@@ -88,7 +87,7 @@
         font-size: var(--sub-title-size);
     }
     .home-section {
-        height: 100vh;
+        height: 60vh;
         width: 100%;
         position: relative;
     }

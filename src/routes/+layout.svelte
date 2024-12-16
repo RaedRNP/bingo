@@ -21,9 +21,9 @@
 
 <style>
     :global(:root) {
-        --main-color: #f5f5f5;
+        --main-color: #0766AD;
         --secondary-color: #C5E898;
-        --background-main-color: #0766AD;
+        --background-main-color: #f5f5f5;
         --main-text-color: #f5f5f5;
         --alert-color: #F7EC09;
         

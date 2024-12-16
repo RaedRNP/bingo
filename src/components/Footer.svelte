@@ -5,7 +5,7 @@
   
   <Footer footerType="logo">
     <div class="sm:flex sm:items-center sm:justify-between">
-      <FooterBrand href="https://flowbite.com" src="/favicon.png" alt="Flowbite Logo" name={SiteName} />
+      <FooterBrand href="/" src="/bingo-ruleta-logo.png" alt="Flowbite Logo" name={SiteName} />
       <FooterLinkGroup ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
         <FooterLink href="/">About</FooterLink>
         <FooterLink href="/">Privacy Policy</FooterLink>
