@@ -6,7 +6,7 @@ export const load: PageServerLoad = async (event) => {
 	if (!event.locals.user) {
 		return redirect(302, '/auth');
 	}
-	return { user: event.locals.user };
+	return { user: event.locals.user, logged: true };
 };
 
 export const actions: Actions = {

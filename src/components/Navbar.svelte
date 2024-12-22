@@ -44,12 +44,21 @@
 		>
 	</NavBrand>
 	<div class="flex items-center md:order-2">
-		<Button
-			class="-ml-20 mr-10 hidden bg-[#4ec93f] uppercase hover:bg-[#68ff54] md:flex"
-			onclick={() => goto('/auth')}
-		>
-			Jugar <ArrowRightOutline class="ms-2 h-5 w-5" />
-		</Button>
+		{#if page.data.logged}
+			<Button
+				class="-ml-20 mr-10 hidden bg-[#4ec93f] uppercase hover:bg-[#68ff54] md:flex"
+				onclick={() => goto('/bingo/bingo sportbook.console.html')}
+			>
+				Jugar <ArrowRightOutline class="ms-2 h-5 w-5" />
+			</Button>
+		{:else}
+			<Button
+				class="-ml-20 mr-10 hidden bg-[#4ec93f] uppercase hover:bg-[#68ff54] md:flex"
+				onclick={() => goto('/auth')}
+			>
+				Inicia Sesión
+			</Button>
+		{/if}
 		{#if page.data.user}
 			<UserCircleOutline size="xl" id="avatar-menu" class="cursor-pointer" />
 		{:else}

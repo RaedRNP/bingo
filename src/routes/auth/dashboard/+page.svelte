@@ -10,13 +10,7 @@
 		SidebarItem,
 		SidebarWrapper
 	} from 'flowbite-svelte';
-	import {
-		AdjustmentsHorizontalOutline,
-		ArrowRightToBracketOutline,
-		CartSolid,
-		LifeSaverSolid
-	} from 'flowbite-svelte-icons';
-	import { enhance } from '$app/forms';
+	import { AdjustmentsHorizontalOutline, CartSolid, LifeSaverSolid } from 'flowbite-svelte-icons';
 	let { data } = $props();
 
 	let money = data.user.Bs?.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '1.');
@@ -71,7 +65,7 @@
 				>{Datos.numTelf}<br />{Datos.id}<br />{Datos.banco}</Popover
 			>
 			<Fileupload id="with_helper" class="mb-2" />
-			<Helper>SVG, PNG, JPG or GIF (MAX. 800x400px).</Helper>
+			<Helper>PNG o JPG(MAX. 800x400px).</Helper>
 		</div>
 	</div>
 </main>

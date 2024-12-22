@@ -1,8 +1,12 @@
 <script lang="ts">
+	//@ts-nocheck
 	import { Button, Heading, P } from 'flowbite-svelte';
 	import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
 	import { goto } from '$app/navigation';
+	import type { PageData } from './$types';
+
+	let page: PageData = $props();
 
 	let SiteName = 'Bingo Ruleta';
 
@@ -18,12 +22,21 @@
 		<div class="title-section">
 			<h1 class="text-7xl">{SiteName}</h1>
 			<Heading tag="h2" class="my-8 text-[#f5f5f5]">{subTitle}</Heading>
-			<Button
-				class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
-				onclick={() => goto('/auth')}
-			>
-				Jugar <ArrowRightOutline class="ms-2 h-6 w-6" />
-			</Button>
+			{#if page.data.logged}
+				<Button
+					class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
+					onclick={() => goto('/auth')}
+				>
+					Jugar <ArrowRightOutline class="ms-2 h-6 w-6" />
+				</Button>
+			{:else}
+				<Button
+					class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
+					onclick={() => goto('/auth')}
+				>
+					Inicia Sesión
+				</Button>
+			{/if}
 		</div>
 		<div class="right-0 -z-10 hidden w-full p-5 sm:absolute sm:block sm:w-1/2">
 			<img src="/dibujo-01.png" alt="bingo ruleta" />
@@ -53,12 +66,21 @@
 		<div class="sub-title-section-2">
 			<Heading tag="h2" class="mb-8 text-[#0766AD]">{sectionOneSubTitle}</Heading>
 			<P class="mb-8 text-center">{sectionOneParagraph}</P>
-			<Button
-				class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
-				onclick={() => goto('/auth')}
-			>
-				Jugar <ArrowRightOutline class="ms-2 h-6 w-6" />
-			</Button>
+			{#if page.data.logged}
+				<Button
+					class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
+					onclick={() => goto('/auth')}
+				>
+					Jugar <ArrowRightOutline class="ms-2 h-6 w-6" />
+				</Button>
+			{:else}
+				<Button
+					class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
+					onclick={() => goto('/auth')}
+				>
+					Inicia Sesión
+				</Button>
+			{/if}
 		</div>
 	</section>
 </main>
