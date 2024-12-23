@@ -25,7 +25,7 @@
 			{#if page.data.logged}
 				<Button
 					class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
-					onclick={() => goto('/auth')}
+					href="https://bingoruleta.com/bingo/bingo%20sportbook.console.html"
 				>
 					Jugar <ArrowRightOutline class="ms-2 h-6 w-6" />
 				</Button>
@@ -69,7 +69,7 @@
 			{#if page.data.logged}
 				<Button
 					class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
-					onclick={() => goto('/auth')}
+					href="https://bingoruleta.com/bingo/bingo%20sportbook.console.html"
 				>
 					Jugar <ArrowRightOutline class="ms-2 h-6 w-6" />
 				</Button>

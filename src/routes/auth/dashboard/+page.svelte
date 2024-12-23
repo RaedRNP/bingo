@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import {
 		Heading,
 		Button,
@@ -10,10 +11,16 @@
 		SidebarItem,
 		SidebarWrapper
 	} from 'flowbite-svelte';
-	import { AdjustmentsHorizontalOutline, CartSolid, LifeSaverSolid } from 'flowbite-svelte-icons';
+	import {
+		AdjustmentsHorizontalOutline,
+		ArrowRightToBracketOutline,
+		CartSolid,
+		LifeSaverSolid
+	} from 'flowbite-svelte-icons';
 	let { data } = $props();
 
 	let money = data.user.Bs?.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '1.');
+	let username = data.user.username;
 
 	const Datos = {
 		numTelf: '+58 424-1234567',
@@ -22,7 +29,7 @@
 	};
 </script>
 
-<main class="flex">
+<main class="flex h-screen">
 	<Sidebar class="h-[80vh] w-14 md:min-w-fit md:pt-24">
 		<SidebarWrapper class="h-full">
 			<SidebarGroup>
@@ -41,21 +48,22 @@
 					</svelte:fragment>
 				</SidebarItem>
 				<!-- <form method="post" action="?/logout" use:enhance>
-					<button>
-						<SidebarItem label="Cerrar Sesión">
-							<svelte:fragment slot="icon">
+					<SidebarItem label="Cerrar Sesión">
+						<svelte:fragment slot="icon">
+							<button>
 								<ArrowRightToBracketOutline
 									class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
 								/>
-							</svelte:fragment>
-						</SidebarItem>
-					</button>
+							</button>
+						</svelte:fragment>
+					</SidebarItem>
 				</form> -->
 			</SidebarGroup>
 		</SidebarWrapper>
 	</Sidebar>
 	<div class="flex w-full flex-col items-center justify-center">
 		<div class="flex flex-col gap-8 text-center">
+			<Heading class="text-[#0766AD]">{username}</Heading>
 			<Heading class="text-[#0766AD]">Saldo</Heading>
 			<Heading>{money} Bs</Heading>
 			<Button id="arrow">
