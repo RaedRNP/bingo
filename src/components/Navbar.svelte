@@ -66,10 +66,10 @@
 				href="/auth"
 				class={page.route.id === '/'
 					? y
-						? 'hidden self-center whitespace-nowrap text-2xl font-semibold text-black sm:block'
-						: 'hidden self-center whitespace-nowrap text-2xl font-semibold text-white sm:block'
+						? 'self-center whitespace-nowrap text-2xl font-semibold text-black'
+						: 'self-center whitespace-nowrap text-2xl font-semibold text-white'
 					: 'hidden self-center whitespace-nowrap text-2xl font-semibold text-black sm:block'}
-				><UserCircleOutline size="xl" /></a
+				><UserCircleOutline size="xl" class="text-black" /></a
 			>
 		{/if}
 		<NavHamburger class1="w-full md:flex md:w-auto md:order-1" />
