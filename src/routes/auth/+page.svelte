@@ -12,7 +12,7 @@
 	<div class={active ? 'container-box active' : 'container-box'}>
 		<div class="form-box login">
 			<form method="POST" action="?/login" use:enhance>
-				<h1>Inicio de sesión</h1>
+				<h1><strong>Inicio de sesión</strong></h1>
 				<div class="input-box">
 					<input
 						type="text"
@@ -34,7 +34,7 @@
 					<i class="bx bxs-lock-alt"></i>
 				</div>
 				<div class="forgot-link">
-					<a href="/">¿Olvidó su contraseña?</a>
+					<a href="/auth/reinicio-clave">¿Olvidó su contraseña?</a>
 				</div>
 				<button class="submit-btn">Iniciar sesión</button>
 				{#if form?.message}
@@ -52,7 +52,7 @@
 
 		<div class="form-box register">
 			<form method="POST" action="?/register" use:enhance>
-				<h1>Regístrate</h1>
+				<h1><strong>Regístrate</strong></h1>
 				<div class="input-box">
 					<input
 						type="email"
@@ -83,7 +83,7 @@
 					/>
 					<i class="bx bxs-lock-alt"></i>
 				</div>
-				<button class="submit-btn">Register</button>
+				<button class="submit-btn">Registrar</button>
 				{#if form?.message}
 					<p style="color: red">{form.message}</p>
 				{/if}
