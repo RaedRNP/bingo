@@ -2,16 +2,14 @@
 	//@ts-nocheck
 	import Card from '../../components/Card.svelte';
 	import { Button } from 'flowbite-svelte';
-	import Navbar from '../../components/Navbar.svelte';
 
 	let SiteName = 'Bingo Ruleta';
 </script>
 
 <main>
-	<Navbar />
 	<div class="half-banner">
-		<h2>Soporte de {SiteName}</h2>
-		<h1>¿En qué podemos ayudar?</h1>
+		<h3>Soporte de {SiteName}</h3>
+		<h2>¿En qué podemos ayudar?</h2>
 		<Button outline class="mt-8 border-[#0766AD] text-[#0766AD] hover:bg-[#0766AD]"
 			>Contacta con nuestro equipo de soporte</Button
 		>
@@ -47,17 +45,17 @@
 		padding: 20px;
 	}
 	.half-banner h2,
-	.half-banner h1 {
+	.half-banner h3 {
 		color: var(--main-color);
-		margin: var(--margin-friend) 0 0 0;
+		margin: var(--margin-friend) 0;
 		text-shadow: var(--text-shadow);
 	}
 	.half-banner h2 {
-		font-size: var(--sub-title-size);
+		font-size: 3em;
 		font-weight: var(--font-weigth);
 	}
-	.half-banner h1 {
-		font-size: var(--title-size);
+	.half-banner h3 {
+		font-size: 2em;
 		font-weight: var(--font-weigth);
 	}
 	.guide-lines {
