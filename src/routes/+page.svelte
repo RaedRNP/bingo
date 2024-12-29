@@ -20,8 +20,10 @@
 <main>
 	<section class="banner">
 		<div class="title-section">
-			<h1 class="text-7xl">{SiteName}</h1>
-			<Heading tag="h2" class="my-8 text-[#f5f5f5]">{subTitle}</Heading>
+			<h1 class="main-title">{SiteName}</h1>
+			<!-- text-3xl md:text-6xl -->
+			<h2 class="main-subtitle">{subTitle}</h2>
+			<!-- my-8 text-xl text-[#f5f5f5] sm:text-3xl -->
 			{#if page.data.logged}
 				<Button
 					class="bg-[#4ec93f] uppercase text-white hover:bg-[#68ff54]"
@@ -38,7 +40,8 @@
 				</Button>
 			{/if}
 		</div>
-		<div class="right-0 -z-10 hidden w-full p-5 sm:absolute sm:block sm:w-1/2">
+		<div class="img-place">
+			<!-- right-0 -z-10 hidden w-full p-5 sm:w-1/2 md:absolute md:block -->
 			<img src="/dibujo-01.png" alt="bingo ruleta" />
 		</div>
 	</section>
@@ -89,31 +92,33 @@
 	.banner {
 		width: 100%;
 		height: 100vh;
-		position: relative;
+		display: flex;
 		background-color: var(--bg-home);
-		background-repeat: no-repeat;
-		background-size: cover;
 		mask-image: linear-gradient(black 92%, transparent);
 	}
 	.title-section {
 		width: 50%;
 		height: 100%;
 		align-content: center;
-		position: absolute;
-		left: 0;
 		padding: 6rem;
 	}
 	.title-section h1 {
 		color: var(--main-text-color);
 		text-shadow: var(--text-shadow);
 	}
-	h1 {
+	.main-title {
 		text-transform: uppercase;
 		font-weight: var(--font-weigth);
+		font-size: var(--title-size);
 	}
-	h2 {
+	.main-subtitle {
 		margin: var(--margin-friend) 0 48px 0;
 		font-size: var(--sub-title-size);
+		color: var(--main-text-color);
+	}
+	.img-place {
+		width: 50%;
+		height: 100%;
 	}
 	.home-section {
 		height: 60vh;
@@ -179,35 +184,42 @@
     .sub-title-section-2 p {
         margin-bottom: var(--margin-aquintances);
     } */
-	@media (width <= 934px) {
+	@media (width <= 820px) {
 		main {
 			width: 100%;
 			align-items: center;
 			text-align: center;
 		}
-		h1 {
+		.banner {
+			flex-direction: column;
+			height: 100vh;
+		}
+		.main-title {
+			padding-top: 4em;
 			font-size: var(--title-size-mobile);
 		}
-		h2 {
+		.main-subtitle {
 			font-size: var(--sub-title-size-mobile);
 		}
 		.title-section {
 			width: 100%;
-			left: 50%;
-			transform: translateX(-50%);
 		}
-		.title-section h1 {
-			font-size: 3em;
+		.title-section {
+			width: 100%;
+			height: 50%;
 		}
-		/* .sub-title-section {
-            text-align: center;
-            width: 100%;
-            left: 50%;
-            padding: 30px;
-            transform: translateX(-50%);
-        } */
+		.img-place {
+			width: 100%;
+			height: 50%;
+			padding: 3em;
+		}
 		.sub-title-section-2 {
 			padding: 0 30px;
+		}
+	}
+	@media (width <= 430px) {
+		.main-title {
+			padding-top: 0;
 		}
 	}
 </style>

@@ -14,10 +14,10 @@
 	--margin-friend: 8px;
 	--margin-aquintances: 64px;
 
-	--title-size: 48px;
-	--sub-title-size: 36px;
-	--title-size-mobile: 30px;
-	--sub-title-size-mobile: 15px;
+	--title-size: 4em;
+	--sub-title-size: 2em;
+	--title-size-mobile: 3em;
+	--sub-title-size-mobile: 1em;
 	--font-weigth: 800;
 }
 body {
