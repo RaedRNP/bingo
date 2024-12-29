@@ -32,7 +32,7 @@
 					<button class="text-grey-900 flex items-center rounded-lg p-2 hover:bg-gray-100">
 						<ArrowRightToBracketOutline
 							class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-						/> Cerrar Sesión
+						/> <span class="ms-3">Cerrar Sesión</span>
 					</button>
 				</form>
 			</SidebarGroup>
