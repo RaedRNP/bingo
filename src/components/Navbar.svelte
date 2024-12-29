@@ -83,7 +83,7 @@
 			<DropdownItem href="/auth/dashboard">Dashboard</DropdownItem>
 			<DropdownItem href="/auth/dashboard/ajustes">Ajustes</DropdownItem>
 			<DropdownDivider />
-			<form method="post" action="?/logout" use:enhance>
+			<form method="post" action="?/logout">
 				<DropdownItem><button>Cerrar Sesión</button></DropdownItem>
 			</form>
 		</Dropdown>
