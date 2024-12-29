@@ -4,7 +4,8 @@
 	import {
 		AdjustmentsHorizontalOutline,
 		ArrowRightToBracketOutline,
-		LifeSaverSolid
+		LifeSaverSolid,
+		ChartPieOutline
 	} from 'flowbite-svelte-icons';
 
 	let { children } = $props();
@@ -14,6 +15,13 @@
 	<Sidebar class="h-full w-14 md:min-w-fit md:pt-24">
 		<SidebarWrapper class="h-full">
 			<SidebarGroup>
+				<SidebarItem label="Dashboard" href="/auth/dashboard">
+					<svelte:fragment slot="icon">
+						<ChartPieOutline
+							class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+						/>
+					</svelte:fragment>
+				</SidebarItem>
 				<SidebarItem label="Ajustes" href="/auth/dashboard/ajustes">
 					<svelte:fragment slot="icon">
 						<AdjustmentsHorizontalOutline
@@ -21,7 +29,7 @@
 						/>
 					</svelte:fragment>
 				</SidebarItem>
-				<SidebarItem label="Ayuda" href="/dashboard/ayuda">
+				<SidebarItem label="Ayuda" href="/soporte">
 					<svelte:fragment slot="icon">
 						<LifeSaverSolid
 							class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
